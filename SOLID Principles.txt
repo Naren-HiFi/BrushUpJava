@@ -1,0 +1,94 @@
+The SOLID principles are a set of five design principles that help developers to write clean, maintainable, and scalable code. These principles were introduced by Robert C. Martin (also known as Uncle Bob) and have become a popular set of guidelines for software developers. The principles are:
+
+Single Responsibility Principle (SRP): A class should have only one reason to change. This means that a class should only be responsible for a single task or concern.
+
+Open/Closed Principle (OCP): A class should be open for extension but closed for modification. This means that you should be able to add new functionality to a class without changing its existing code.
+
+Liskov Substitution Principle (LSP): Subtypes must be substitutable for their base types. This means that objects of a superclass should be able to be replaced with objects of a subclass without breaking the code.
+
+Interface Segregation Principle (ISP): Clients should not be forced to depend on interfaces they do not use. This means that you should create smaller, more specific interfaces rather than one large interface that is used by many clients.
+
+Dependency Inversion Principle (DIP): High-level modules should not depend on low-level modules. Both should depend on abstractions. This means that you should use abstractions (such as interfaces) to define the relationships between classes, rather than concrete implementations.
+
+Here are some examples of how these principles can be applied in Java:
+
+Single Responsibility Principle:
+java
+Copy code
+public class UserService {
+    public void registerUser(User user) {
+        // code to register a new user
+    }
+}
+
+public class UserValidator {
+    public boolean isValid(User user) {
+        // code to validate a user
+    }
+}
+In this example, we have split the responsibilities of registering a user and validating a user into two separate classes. This makes it easier to change or modify the validation logic without affecting the registration code.
+
+Open/Closed Principle:
+java
+Copy code
+public abstract class Shape {
+    public abstract double area();
+}
+
+public class Circle extends Shape {
+    private double radius;
+    public double area() {
+        return Math.PI * radius * radius;
+    }
+}
+
+public class Square extends Shape {
+    private double side;
+    public double area() {
+        return side * side;
+    }
+}
+In this example, the Shape class is open for extension because we can add new shapes (such as a rectangle) without changing the existing code. The Shape class is closed for modification because we do not need to modify the existing Shape class to add new shapes.
+
+Liskov Substitution Principle:
+java
+Copy code
+public class Animal {
+    public void makeSound() {
+        System.out.println("Animal sound");
+    }
+}
+
+public class Dog extends Animal {
+    public void makeSound() {
+        System.out.println("Bark");
+    }
+}
+
+public class AnimalSound {
+    public void playSound(Animal animal) {
+        animal.makeSound();
+    }
+}
+In this example, the AnimalSound class can accept any type of Animal (including a Dog). This is because the Dog class is substitutable for its base class (Animal).
+
+Interface Segregation Principle:
+java
+Copy code
+public interface Payable {
+    void pay();
+}
+
+public interface Taxable {
+    void calculateTax();
+}
+
+public class Employee implements Payable, Taxable {
+    public void pay() {
+        // code to pay the employee
+    }
+    public void calculateTax() {
+        // code to calculate the employee's tax
+    }
+}
+In this example, we have created two smaller, more specific interfaces (Payable and Taxable) rather than one large interface that includes both methods. The Employee class implements both interfaces, but clients only need to depend on the methods.
