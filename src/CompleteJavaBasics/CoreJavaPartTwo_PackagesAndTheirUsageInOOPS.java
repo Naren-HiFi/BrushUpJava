@@ -8,7 +8,8 @@ package CompleteJavaBasics;
  java.lang is a package in the Java programming language that contains fundamental classes and
  interfaces that are necessary for the development of Java programs.
 
- The classes and interfaces in this package are automatically imported into every Java program, which means
+ The classes and interfaces in this package are automatically imported into every Java program,
+  which means
  that you don't have to explicitly import them in your code.
 
 Some of the classes and interfaces in the java.lang package include:
@@ -17,7 +18,8 @@ Object: The root class of the Java class hierarchy.
 
 String: A class that represents a sequence of characters.
 
-Integer, Long, Float, Double, Short, and Byte: Classes that wrap the primitive data types int, long, float,
+Integer, Long, Float, Double, Short, and Byte: Classes that wrap the primitive data types int, long,
+ float,
  double, short, and byte, respectively.
 
 Math: A class that provides basic mathematical operations and functions.
@@ -33,17 +35,20 @@ development of Java programs, and it is automatically included in every Java pro
 
  java.util => All collection interfaces come under util package.
 
- java.util is a package in the Java programming language that provides a collection of utility classes
+ java.util is a package in the Java programming language that provides a collection of utility
+ classes
  and interfaces to support the development of Java programs.
 
-  The classes and interfaces in this package are not automatically imported into Java programs and must be
+  The classes and interfaces in this package are not automatically imported into Java programs
+   and must be
   explicitly imported when needed.
 
 Some of the classes and interfaces in the java.util package include:
 
 List, Set, Map, Queue, and Deque: Interfaces that define various collection types.
 
-ArrayList, LinkedList, HashSet, TreeSet, HashMap, TreeMap, PriorityQueue, and ArrayDeque: Classes that
+ArrayList, LinkedList, HashSet, TreeSet, HashMap, TreeMap, PriorityQueue, and ArrayDeque: Classes
+ that
  implement the collection interfaces and provide different implementations of collections.
 
 Iterator: An interface that provides a way to traverse the elements of a collection.
@@ -64,7 +69,8 @@ User defined java packages => import package.classname
 1. Class A can use the class B directly by creating the object
 if both Class A and Class B belongs to same package
 
-2. You can access the class and methods that lies outside the current package by importing that specific
+2. You can access the class and methods that lies outside the current package by importing that
+specific
 package and class inside another user defined package
 
 You can have multiple user defined packages. Moreover, you can have a kind of consistency here
@@ -89,6 +95,7 @@ public class CoreJavaPartTwo_PackagesAndTheirUsageInOOPS {
     public static void main(String[] args) {
         ArrayListIterateListUsingForLoop arrayList = new ArrayListIterateListUsingForLoop();
         arrayList.abc();
+
 
     }
 

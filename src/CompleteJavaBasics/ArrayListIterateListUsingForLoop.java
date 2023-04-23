@@ -9,6 +9,11 @@ public class ArrayListIterateListUsingForLoop {
     public void abc(){
         System.out.println("Calling the method from another class");
     }
+
+    protected void cde(){
+        System.out.println("Calling the method from another package");
+    }
+
     public static void main(String[] args) {
 
         ArrayList<Integer> integerArrayList = new ArrayList<Integer>();
